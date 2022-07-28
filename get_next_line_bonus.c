@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbikandi <nbikandi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 17:18:28 by nbikandi          #+#    #+#             */
-/*   Updated: 2022/07/26 16:31:57 by nbikandi         ###   ########.fr       */
+/*   Created: 2022/07/26 17:04:40 by nbikandi          #+#    #+#             */
+/*   Updated: 2022/07/26 18:02:28 by nbikandi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,17 +96,17 @@ char	*ft_save(char *buf1)
 
 char	*get_next_line(int fd)
 {
-	static char	*str;
+	static char	*str[OPEN_MAX];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
 	{
 		return (NULL);
 	}
-	str = ft_read(fd, str);
-	if (!str)
+	str[fd] = ft_read(fd, str[fd]);
+	if (!str[fd])
 		return (NULL);
-	line = ft_lines(str);
-	str = ft_save(str);
+	line = ft_lines(str[fd]);
+	str[fd] = ft_save(str[fd]);
 	return (line);
 }

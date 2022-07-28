@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbikandi <nbikandi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/05 17:19:17 by nbikandi          #+#    #+#             */
-/*   Updated: 2022/07/26 16:20:39 by nbikandi         ###   ########.fr       */
+/*   Created: 2022/07/26 17:07:10 by nbikandi          #+#    #+#             */
+/*   Updated: 2022/07/26 17:08:12 by nbikandi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <stdarg.h>
 # include <unistd.h>
